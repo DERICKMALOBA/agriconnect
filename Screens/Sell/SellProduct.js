@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import {  Text, TextInput, ScrollView, TouchableOpacity, Image, Picker } from "react-native";
+import {  Text, TextInput, ScrollView, TouchableOpacity, Image } from "react-native";
+import { Picker } from "@react-native-picker/picker";
+
+
 import * as ImagePicker from "expo-image-picker";
 
 const SellProductScreen = () => {

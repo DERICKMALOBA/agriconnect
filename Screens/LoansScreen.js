@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-import { Picker } from '@react-native-picker/picker'
+
+import CustomPicker from '../Componets/customPicker';
 import { ProgressBar } from 'react-native-paper';
 
 export default function LoanScreen() {
@@ -20,18 +20,18 @@ export default function LoanScreen() {
         onChangeText={setLoanAmount}
         style={{ backgroundColor: 'white', padding: 10, marginBottom: 10, borderRadius: 5 }}
       />
-      <Picker selectedValue={loanPurpose} onValueChange={(itemValue) => setLoanPurpose(itemValue)}>
-        <Picker.Item label="Select Loan Purpose" value="" />
-        <Picker.Item label="Buy Seeds" value="seeds" />
-        <Picker.Item label="Expand Land" value="land" />
-        <Picker.Item label="Purchase Equipment" value="equipment" />
-      </Picker>
-      <Picker selectedValue={repaymentPeriod} onValueChange={(itemValue) => setRepaymentPeriod(itemValue)}>
-        <Picker.Item label="Select Repayment Period" value="" />
-        <Picker.Item label="3 Months" value="3" />
-        <Picker.Item label="6 Months" value="6" />
-        <Picker.Item label="12 Months" value="12" />
-      </Picker>
+       <CustomPicker selectedValue={loanPurpose} onValueChange={(itemValue) => setLoanPurpose(itemValue)}>
+        <CustomPicker.Item label="Select Loan Purpose" value="" />
+        <CustomPicker.Item label="Buy Seeds" value="seeds" />
+        <CustomPicker.Item label="Expand Land" value="land" />
+        <CustomPicker.Item label="Purchase Equipment" value="equipment" />
+      </CustomPicker>
+      <CustomPicker selectedValue={repaymentPeriod} onValueChange={(itemValue) => setRepaymentPeriod(itemValue)}>
+        <CustomPicker.Item label="Select Repayment Period" value="" />
+        <CustomPicker.Item label="3 Months" value="3" />
+        <CustomPicker.Item label="6 Months" value="6" />
+        <CustomPicker.Item label="12 Months" value="12" />
+      </CustomPicker>
       <TouchableOpacity style={{ backgroundColor: '#28a745', padding: 15, borderRadius: 5, marginTop: 10 }}>
         <Text style={{ color: 'white', textAlign: 'center', fontSize: 16 }}>Submit Application</Text>
       </TouchableOpacity>
