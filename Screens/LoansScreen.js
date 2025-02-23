@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView, Picker } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import { Picker } from '@react-native-picker/picker'
 import { ProgressBar } from 'react-native-paper';
 
 export default function LoanScreen() {
